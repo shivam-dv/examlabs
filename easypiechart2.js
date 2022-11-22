@@ -92,9 +92,10 @@ $(document).ready(function () {
 var speed = 10;
 function incEltNbr(id) {
   $(id).each(function() {
+    var elt = this;
     var spinrefer = function () {
-    if ($(window).scrollTop() > $(this).offset().top - 600 && Number($('this').text().trim().slice(0, -1)) >= Number('0')) {
-      incNbrRec(0, this.dataset.value, this);
+    if ($(window).scrollTop() > $(elt).offset().top - 600 && Number($(elt).text().trim().slice(0, -1)) >= Number('0')) {
+      incNbrRec(0, elt.dataset.value, elt);
       window.removeEventListener('scroll', spinrefer, false);
     }
   }
