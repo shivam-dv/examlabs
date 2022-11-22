@@ -83,4 +83,38 @@ $(document).ready(function () {
     }
   }
   window.addEventListener('scroll', chart4Reference, false);
+  
+  
+  
+  
+  
+  
+var speed = 10;
+function incEltNbr(id) {
+  $(id).each(function() {
+    incNbrRec(0, this.dataset.value, this);
+  });
+}
+function incNbrRec(i, endNbr, elt) {
+  if (i <= endNbr) {
+    elt.innerHTML = i;
+    setTimeout(function() {
+      incNbrRec(i + 0.1, endNbr, elt);
+    }, speed);
+  }
+}
+
+/*Function called on button click*/
+function incNbr(){
+  incEltNbr("nbr");
+}
+
+incEltNbr(".pp-info-data span");
 })
+
+
+
+
+
+
+
