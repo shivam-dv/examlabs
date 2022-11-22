@@ -107,9 +107,10 @@ function incNbrRec(i, endNbr, elt) {
   if (i <= endNbr) {
     elt.innerHTML = i;
     setTimeout(function() {
-      incNbrRec(i + 0.1, endNbr, elt);
+      incNbrRec(i + 1, endNbr, elt);
     }, speed);
-  }
+  } else {
+    elt.innerHTML = endNbr;
 }
 
 function incNbr(){
