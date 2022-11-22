@@ -95,7 +95,7 @@ function incEltNbr(id) {
     var elt = this;
     var spinrefer = function () {
     if ($(window).scrollTop() > $(elt).offset().top - 600 && Number($(elt).text().trim().slice(0, -1)) >= Number('0')) {
-      incNbrRec(0, elt.dataset.value, elt);
+      incNbrRec(0, Number(elt.dataset.value), elt);
       window.removeEventListener('scroll', spinrefer, false);
     }
   }
