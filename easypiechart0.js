@@ -111,6 +111,7 @@ function incNbrRec(i, endNbr, elt) {
     }, speed);
   } else {
     elt.innerHTML = endNbr;
+  }
 }
 
 function incNbr(){
